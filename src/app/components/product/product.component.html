@@ -1,0 +1,12 @@
+<div *ngIf="product$ | async as product">
+  <h1>{{ product.name }}</h1>
+  <h2>{{ product.price }}</h2>
+  <img src="{{ product.image1 }}" alt="">
+  <img src="{{ product.image2 }}" alt="">
+  <img src="{{ product.image3 }}" alt="">
+  <img src="{{ product.image4 }}" alt="">
+  <img src="{{ product.image5 }}" alt="">
+  <p>{{product.summary}}</p>
+  <p>{{product.description}}</p>
+
+</div>
