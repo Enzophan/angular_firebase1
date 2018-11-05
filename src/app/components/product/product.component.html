@@ -1,4 +1,4 @@
-<div *ngIf="product$ | async as product">
+<!-- <div *ngIf="product$ | async as product">
   <h1>{{ product.name }}</h1>
   <h2>{{ product.price }}</h2>
   <img src="{{ product.image1 }}" alt="">
@@ -9,4 +9,71 @@
   <p>{{product.summary}}</p>
   <p>{{product.description}}</p>
 
-</div>
+</div> -->
+
+<!-- Page Content -->
+<div class="container"  *ngIf="product$ | async as product">
+  
+        <!-- Portfolio Item Heading -->
+        <h1 class="my-4">{{ product.name }} <br>
+          <small style="color:gray;font-size:50%;">{{product.summary}}</small>
+        </h1>
+  
+        <!-- Portfolio Item Row -->
+        <div class="row">
+  
+          <div class="col-md-8">
+            <img class="img-fluid" src="{{ product.image1 }}" alt="">
+            <!-- <img class="img-fluid" src="http://placehold.it/750x500" alt=""> -->
+          </div>
+  
+          <div class="col-md-4">
+            <h3 class="my-3" style="color:#FF6700;">{{ product.price }}</h3>
+            <h3 class="my-3">Thông tin chi tiết</h3>
+            <ul>
+              <li>Mã sản phẩm:</li>
+              <li>Thương hiệu:</li>
+              <li>Trạng thái:</li>
+              <li>Bảo hành:</li>
+            </ul>
+            <h3 class="my-3">Mô tả sản phẩm {{ product.name }}</h3>
+            <p>{{product.description}}</p>
+          </div>
+  
+        </div>
+        <!-- /.row -->
+  
+        <!-- Related Projects Row -->
+        <h3 class="my-4">Hình ảnh</h3>
+  
+        <div class="row">
+  
+          <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+              <img class="img-fluid" src="{{ product.image2 }}" alt="">
+            </a>
+          </div>
+  
+          <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+              <img class="img-fluid" src="{{ product.image3 }}" alt="">
+            </a>
+          </div>
+  
+          <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+              <img class="img-fluid" src="{{ product.image4 }}" alt="">
+            </a>
+          </div>
+  
+          <div class="col-md-3 col-sm-6 mb-4">
+            <a href="#">
+              <img class="img-fluid" src="{{ product.image5 }}" alt="">
+            </a>
+          </div>
+  
+        </div>
+        <!-- /.row -->
+  
+      </div>
+      <!-- /.container -->

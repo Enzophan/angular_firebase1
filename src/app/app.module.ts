@@ -22,6 +22,7 @@ import { from } from 'rxjs/internal/observable/from';
 import { concat } from 'rxjs/internal/observable/concat';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -46,7 +47,8 @@ const appRoutes: Routes = [
     ContactComponent,
     ProductsComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
